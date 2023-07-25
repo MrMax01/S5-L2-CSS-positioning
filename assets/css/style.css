@@ -27,6 +27,9 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  z-index: 1;
+  top: 0;
 }
 
 @media screen and (min-width: 800px) {
@@ -112,6 +115,10 @@ section h2 {
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  box-shadow: 0 3px 3px #444;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -123,7 +130,15 @@ h1 {
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
 }
-
+.underline-container {
+  position: relative;
+}
+.underline-container img:first-of-type {
+  position: absolute;
+  bottom: -14px;
+  right: 7px;
+  opacity: 0.5;
+}
 p,
 address,
 ul,
@@ -165,11 +180,20 @@ h1 + p {
     font-size: 1.4rem;
     font-weight: 700;
   }
+  .underline-container img:first-of-type {
+    right: 21px;
+    width: 97%;
+  }
 }
 
 @media screen and (min-width: 700px) {
   h1 {
     font-size: 3.6rem;
+  }
+  .underline-container img:first-of-type {
+    right: 89px;
+    width: 85%;
+    bottom: -19px;
   }
 }
 
@@ -179,6 +203,11 @@ h1 + p {
   }
   section {
     border-radius: 20px;
+  }
+  .underline-container img:first-of-type {
+    right: 118px;
+    width: 47%;
+    bottom: -19px;
   }
 }
 
@@ -288,12 +317,59 @@ button {
     width: 70%;
   }
 }
+.icon-side {
+  padding: 0.3em;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.285);
+  color: blue;
+  font-size: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 1px #444;
+}
+.icon-side:nth-of-type(3) {
+  color: red;
+}
+#plus {
+  position: fixed;
+  right: -9px;
+  /* bottom: 0; */
+  /* bottom: 353px; */
+  bottom: 207px;
+}
+#calendar {
+  position: fixed;
+  right: -9px;
+  /* bottom: 0; */
+  /* bottom: 353px; */
+  bottom: 129px;
+}
+#go-back {
+  position: fixed;
+  right: -9px;
+  /* bottom: 0; */
+  /* bottom: 353px; */
+  bottom: 49px;
+}
 @media screen and (min-width: 700px) {
   input {
     padding: 15px;
   }
   button {
     padding: 15px 30px;
+  }
+  #plus {
+    top: 11px;
+    bottom: auto;
+    z-index: 2;
+  }
+  #calendar {
+    top: 82px;
+    bottom: auto;
+    z-index: 2;
+  }
+  #go-back {
+    bottom: 18px;
   }
 }
 
