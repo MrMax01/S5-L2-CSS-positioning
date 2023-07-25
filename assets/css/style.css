@@ -139,6 +139,9 @@ h1 {
   right: 7px;
   opacity: 0.5;
 }
+article img:first-of-type {
+  float: left;
+}
 p,
 address,
 ul,
